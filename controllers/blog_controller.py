@@ -127,7 +127,7 @@ def edit_blog(blog_id):
 @blog_bp.route('/api/blogs/<uuid:blog_id>', methods=['DELETE'])
 def delete_blog(blog_id):
     session = connect_to_astra()
-    delete_blog(session, blog_id)
+    delete_blog(blog_id)
 
     return jsonify({'message': 'Blog deleted successfully'}), 200
 
